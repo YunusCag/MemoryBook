@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MemoryBook</string>
+    <string name="add_a_note">Add a Note</string>
+    <string name="add_new_note">Add New Note</string>
+    <string name="enter_a_note">Enter a note</string>
+    <string name="btnAdd">ADD</string>
+</resources>

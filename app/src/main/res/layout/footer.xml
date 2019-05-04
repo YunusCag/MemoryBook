@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btn_footer"
+    android:background="@drawable/btn_add_note_background"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/add_a_note"
+    android:fontFamily="sans-serif-thin"
+    android:textSize="@dimen/btn_text_size"
+    android:textAllCaps="false"
+    android:layout_margin="22dp"
+    android:layout_marginLeft="50dp"
+    android:layout_gravity="center|center_horizontal"
+    android:layout_centerHorizontal="true"
+    android:paddingLeft="@dimen/btn_text_padding_left_right"
+    android:paddingRight="@dimen/btn_text_padding_left_right"
+    android:paddingTop="@dimen/btn_text_padding_up_down"
+    android:paddingBottom="@dimen/btn_text_padding_up_down"
+    android:textColor="@color/btn_text_color_change"
+    android:layout_below="@+id/iv_logo">
+
+
+</Button>

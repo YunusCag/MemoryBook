@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#323232</color>
+    <color name="colorPrimaryDark">#222831</color>
+    <color name="colorAccent">#900048</color>
+    <color name="homeBackground">#393e46</color>
+    <color name="oneNoteBackground">#4e4e4e</color>
+    <color name="oneNoteTextColor">#fff5eb</color>
+    <color name="homeFabBackgroundColor">#e8e8e8</color>
+    <color name="recyclerViewDivider">#085f63</color>
+
+
+
+    <color name="btn_add_note_text_color">#f44336</color>
+    <color name="btn_clicked_background">#085f63</color>
+
+</resources>
