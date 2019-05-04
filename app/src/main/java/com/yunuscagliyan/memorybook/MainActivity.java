@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements AddListener {
          initialize();
         setBackgroundImage();
 
-        //update recyclerView
+        //update recyclerView//
         updateAdapter();
         rVNoteList.isEmptyListInvisible(mToolbar);
         rVNoteList.isEmptyListVisible(emptyList);

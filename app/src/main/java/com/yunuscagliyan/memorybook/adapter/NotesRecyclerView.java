@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+//CustomRecyclerView
 public class NotesRecyclerView extends RecyclerView {
     List<View> isEmptyInvisible= Collections.EMPTY_LIST;
     List<View> isEmptyVisible= Collections.EMPTY_LIST;

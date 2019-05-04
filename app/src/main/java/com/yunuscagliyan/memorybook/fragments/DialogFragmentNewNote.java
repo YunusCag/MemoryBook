@@ -20,7 +20,7 @@ import com.yunuscagliyan.memorybook.data.NoteProvider;
 
 
 import es.dmoral.toasty.Toasty;
-
+//
 public class DialogFragmentNewNote extends DialogFragment {
     private static final Uri CONTENT_URI = NoteProvider.CONTENT_URI;
 

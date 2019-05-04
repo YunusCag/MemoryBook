@@ -1,5 +1,6 @@
 package com.yunuscagliyan.memorybook.data;
 
+//Data Model
 public class Notes {
     private int id;
     private String noteContent;

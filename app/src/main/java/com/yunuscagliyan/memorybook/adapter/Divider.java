@@ -17,6 +17,7 @@ public class Divider extends RecyclerView.ItemDecoration {
     public Divider(Context context,int orientation) {
         mDivider =context.getDrawable(R.drawable.divider);
         //mDivider= ContextCompat.getDrawable(context,R.drawable.divider);
+        //mDivider
         if(orientation!=LinearLayoutManager.VERTICAL){
            throw new IllegalArgumentException("this argument don't belong here");
         }

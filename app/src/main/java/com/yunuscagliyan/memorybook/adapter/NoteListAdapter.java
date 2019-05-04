@@ -12,11 +12,12 @@ import android.widget.TextView;
 import com.yunuscagliyan.memorybook.R;
 import com.yunuscagliyan.memorybook.data.Notes;
 import com.yunuscagliyan.memorybook.listeners.AddListener;
+import com.yunuscagliyan.memorybook.listeners.SwipeListener;
 
 import java.util.List;
 
 
-public class NoteListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class NoteListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements SwipeListener {
     private static final int ITEM = 0;
     public static final int FOOTER=1;
     private Context mContext;
@@ -85,6 +86,11 @@ public class NoteListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             return FOOTER;
 
         }
+
+    }
+
+    @Override
+    public void swipeItem(int position) {
 
     }
 
