@@ -55,7 +55,7 @@ public class NotesRecyclerView extends RecyclerView {
     public void showOrHideView(){
         if(getAdapter()!=null && !isEmptyVisible.isEmpty() &&!isEmptyInvisible.isEmpty()){
             //no element state
-            if(getAdapter().getItemCount()==1){
+            if(getAdapter().getItemCount()==0){
 
                 for(View view:isEmptyInvisible){
                     view.setVisibility(View.GONE);
@@ -64,7 +64,7 @@ public class NotesRecyclerView extends RecyclerView {
                     view.setVisibility(View.VISIBLE);
                 }
                 setVisibility(View.GONE);
-            }else if (getAdapter().getItemCount()>1){
+            }else {
                 setVisibility(View.VISIBLE);
                 for(View view:isEmptyInvisible){
                     view.setVisibility(View.VISIBLE);
