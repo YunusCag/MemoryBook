@@ -34,5 +34,15 @@ dependencies {
     //Glide library
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //Eventbus Library
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+
+
+
+
+
+
+
 
 }

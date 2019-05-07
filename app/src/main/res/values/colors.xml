@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#323232</color>
-    <color name="colorPrimaryDark">#222831</color>
-    <color name="colorAccent">#900048</color>
-    <color name="homeBackground">#393e46</color>
+    <color name="colorPrimary">#385170</color>
+    <color name="colorPrimaryDark">#142d4c</color>
+    <color name="colorAccent">#1565c0</color>
+    <color name="homeBackground">#ececec</color>
     <color name="oneNoteBackground">#4e4e4e</color>
-    <color name="oneNoteTextColor">#fff5eb</color>
-    <color name="homeFabBackgroundColor">#e8e8e8</color>
+    <color name="oneNoteTextColor">#4e4e4e</color>
+    <color name="homeFabBackgroundColor">#705772</color>
     <color name="recyclerViewDivider">#085f63</color>
+    <color name="completed_dialog_background">#085f63</color>
+    <color name="completed_note_background">#9c93c9</color>
+    <color name="add_new_note_color">#305f72</color>
+    <color name="one_note_divider">#0c084c</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="date_picker_background_color">#145374</color>
 
 
 
-    <color name="btn_add_note_text_color">#f44336</color>
-    <color name="btn_clicked_background">#085f63</color>
+    <color name="btn_add_note_text_color">#4e4e4e</color>
+    <color name="btn_add_note_background_color">#f34573</color>
+    <color name="btn_clicked_background">#9c93c9</color>
 
 </resources>

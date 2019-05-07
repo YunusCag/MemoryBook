@@ -4,7 +4,7 @@ package com.yunuscagliyan.memorybook.data;
 public class Notes {
     private int id;
     private String noteContent;
-    private String noteDate;
+    private long noteDate;
     private int noteComplete;
 
     public Notes(String noteContent) {
@@ -27,11 +27,11 @@ public class Notes {
         this.noteContent = noteContent;
     }
 
-    public String getNoteDate() {
+    public long getNoteDate() {
         return noteDate;
     }
 
-    public void setNoteDate(String noteDate) {
+    public void setNoteDate(long noteDate) {
         this.noteDate = noteDate;
     }
 

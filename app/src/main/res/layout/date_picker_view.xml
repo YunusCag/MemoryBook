@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_date_day"
+        android:layout_width="90dp"
+        android:text="15"
+        style="@style/date_item_style" />
+    <Space
+        android:layout_width="@dimen/date_picker_item_dimen"
+        android:layout_height="match_parent" />
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:id="@+id/tv_date_month"
+        style="@style/date_item_style"
+        android:text="January"/>
+    <Space
+        android:layout_width="@dimen/date_picker_item_dimen"
+        android:layout_height="match_parent" />
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:id="@+id/tv_date_year"
+        style="@style/date_item_style"
+        android:text="2019"/>
+
+</LinearLayout>

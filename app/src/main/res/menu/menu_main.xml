@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_new_note"
+        android:title="@string/btnAdd"
+        android:icon="@drawable/ic_add"
+        app:showAsAction="always"/>
+    <item android:id="@+id/menu_no_filter"
+        android:title="@string/all_notes"/>
+    <item android:id="@+id/menu_long_time"
+        android:title="@string/long_time"/>
+    <item android:id="@+id/menu_short_time"
+        android:title="@string/short_time"/>
+    <item android:id="@+id/menu_completed_notes"
+        android:title="@string/completed_task"/>
+    <item android:id="@+id/menu_not_completed_notes"
+        android:title="@string/not_completed_task"/>
+
+
+</menu>

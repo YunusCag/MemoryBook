@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/note_completed_background">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/btnClose"
+        android:tint="@color/colorAccent"
+        android:src="@drawable/ic_close"
+        android:scaleType="fitCenter"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/btn_completed"
+        android:background="@null"/>
+    
+    <Button
+        android:id="@+id/btn_completed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="10dp"
+        android:layout_centerInParent="true"
+        android:textSize="24sp"
+        android:text="@string/note_completed"
+        android:layout_marginTop="96dp"
+        android:layout_marginBottom="96dp"
+        android:drawableTint="@color/colorAccent"
+        android:drawableTop="@drawable/ic_check_circle"
+        android:textAllCaps="false"/>
+
+</RelativeLayout>

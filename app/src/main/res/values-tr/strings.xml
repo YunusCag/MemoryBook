@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hafıza Defteri</string>
+    <string name="add_a_note">" Not Ekle"</string>
+    <string name="add_new_note">Yeni Not Ekle</string>
+    <string name="btnAdd">EKLE</string>
+    <string name="enter_a_note">Not gir</string>
+    <string name="note_completed">Note tammalandı mı ?</string>
+    <string name="exit">Çıkış</string>
+    <string name="menu_task">Görev</string>
+    <string name="my_day">Bugün</string>
+    <string name="setting">Ayarlar</string>
+    <string name="open_drawer">Aç</string>
+    <string name="close_drawer">Kapat</string>
+    <string name="completed_task">Tamamlanmış Notlar</string>
+    <string name="long_time">Uzun Zamanlı</string>
+    <string name="not_completed_task">Notlar</string>
+    <string name="short_time">Kısa Zamanlı</string>
+    <string name="filter_result_empty">Filtre Sonucu:boş</string>
+    <string name="all_notes">Bütün Notlar</string>
+</resources>

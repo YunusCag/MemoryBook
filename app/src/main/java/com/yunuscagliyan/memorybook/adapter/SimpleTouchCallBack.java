@@ -4,18 +4,21 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
+import com.yunuscagliyan.memorybook.dataEventBus.DataEvent;
 import com.yunuscagliyan.memorybook.listeners.SwipeListener;
 
+import org.greenrobot.eventbus.EventBus;
+
 public class SimpleTouchCallBack extends ItemTouchHelper.Callback {
-    SwipeListener mSwipeListener;
-
-    public SimpleTouchCallBack(SwipeListener mSwipeListener) {
-        this.mSwipeListener = mSwipeListener;
-    }
-
     @Override
     public int getMovementFlags(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder) {
-        return makeMovementFlags(0,ItemTouchHelper.END);
+
+        if(viewHolder instanceof NoteListAdapter.NoteViewHolder){
+            return makeMovementFlags(0,ItemTouchHelper.END);
+        }else {
+            return makeMovementFlags(0,0);
+        }
+
     }
 
     @Override
@@ -35,7 +38,8 @@ public class SimpleTouchCallBack extends ItemTouchHelper.Callback {
 
     @Override
     public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
-        mSwipeListener.swipeItem(i);
+        EventBus .getDefault().post(new DataEvent.SwipedNotePosition(viewHolder.getAdapterPosition()));
+        //mSwipeListener.onSwipe(viewHolder.getAdapterPosition());
 
 
 

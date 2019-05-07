@@ -4,4 +4,17 @@
     <string name="add_new_note">Add New Note</string>
     <string name="enter_a_note">Enter a note</string>
     <string name="btnAdd">ADD</string>
+    <string name="note_completed">Note Completed ?</string>
+    <string name="my_day">My Day</string>
+    <string name="menu_task">Task</string>
+    <string name="setting">Setting</string>
+    <string name="exit">Exit</string>
+    <string name="open_drawer">Open</string>
+    <string name="close_drawer">Close</string>
+    <string name="long_time">Long Time</string>
+    <string name="short_time">Short Time</string>
+    <string name="completed_task">Completed Task</string>
+    <string name="not_completed_task">Not Completed Task</string>
+    <string name="filter_result_empty">Filter Result:empty</string>
+    <string name="all_notes">All Notes</string>
 </resources>
