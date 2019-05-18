@@ -6,6 +6,15 @@ public class Notes {
     private String noteContent;
     private long noteDate;
     private int noteComplete;
+    private long noteInsertionDate;
+
+    public long getNoteInsertionDate() {
+        return noteInsertionDate;
+    }
+
+    public void setNoteInsertionDate(long noteInsertionDate) {
+        this.noteInsertionDate = noteInsertionDate;
+    }
 
     public Notes(String noteContent) {
         this.noteContent = noteContent;

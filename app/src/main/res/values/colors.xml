@@ -14,6 +14,7 @@
     <color name="one_note_divider">#0c084c</color>
     <color name="transparent">@android:color/transparent</color>
     <color name="date_picker_background_color">#145374</color>
+    <color name="darker_gray">#9e9e9e</color>
 
 
 

@@ -1,75 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/add_new_note_background">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:background="@drawable/add_new_note_background">
+    android:background="@drawable/add_new_note_background"
+    android:fitsSystemWindows="true">
+
+        <Button
+            android:id="@+id/btn_setDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etNote"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="24dp"
+            android:layout_toStartOf="@+id/btn_setTime"
+            android:background="@drawable/btn_setdate_background"
+            android:drawableLeft="@drawable/ic_action_calendar_month"
+            android:drawableTint="@android:color/black"
+            android:text="@string/set_date"
+            app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+            app:layout_constraintEnd_toStartOf="@+id/btn_setTime" />
+
         <TextView
             android:id="@+id/tvTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/add_new_note"
+            android:textColor="#f4511e"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginBottom="36dp"/>
+            app:layout_constraintBottom_toTopOf="@+id/etNote"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.22" />
+
         <ImageButton
             android:id="@+id/btnClose"
             android:layout_width="18dp"
-            android:layout_height="18dp"
-            android:src="@drawable/ic_close"
-            android:background="@null"
-            android:tint="@android:color/holo_red_dark"
+            android:layout_height="0dp"
             android:layout_alignTop="@+id/tvTitle"
             android:layout_alignBottom="@+id/tvTitle"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp"/>
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@null"
+            android:src="@drawable/ic_close"
+            android:tint="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/etNote"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvTitle"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="56dp"
             android:background="@drawable/add_note_background"
             android:hint="@string/enter_a_note"
             android:maxLines="1"
-            android:padding="10dp" />
-
-        <com.yunuscagliyan.memorybook.ui.MyCustomDatePicker
-            android:id="@+id/noteDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fitsSystemWindows="true"
-            android:layout_below="@+id/etNote"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="7dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
-            android:layout_marginEnd="2dp" />
+            android:padding="10dp"
+            android:textColor="@color/darker_gray"
+            android:textColorHint="@color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/btn_setDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/btnAdd"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/noteDate"
+            android:layout_below="@+id/btn_setTime"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="34dp"
-            android:layout_marginEnd="34dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="280dp"
+            android:background="@drawable/btn_radius"
             android:gravity="center"
             android:text="@string/btnAdd"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    </RelativeLayout>
-</ScrollView>
+        <Button
+            android:id="@+id/btn_setTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etNote"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/btn_set_time_background"
+            android:drawableLeft="@drawable/ic_alarm_on"
+            android:text="@string/set_time"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_setDate"
+            app:layout_constraintEnd_toEndOf="@+id/btnAdd"
+            app:layout_constraintTop_toTopOf="@+id/btn_setDate"
+            app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>

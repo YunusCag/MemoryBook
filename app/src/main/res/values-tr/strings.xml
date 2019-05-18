@@ -14,8 +14,10 @@
     <string name="close_drawer">Kapat</string>
     <string name="completed_task">Tamamlanmış Notlar</string>
     <string name="long_time">Uzun Zamanlı</string>
-    <string name="not_completed_task">Notlar</string>
+    <string name="not_completed_task">Tamamlanmayan Notlar</string>
     <string name="short_time">Kısa Zamanlı</string>
     <string name="filter_result_empty">Filtre Sonucu:boş</string>
     <string name="all_notes">Bütün Notlar</string>
+    <string name="set_date">Tarih Seç</string>
+    <string name="set_time">Saati Ayarla</string>
 </resources>

@@ -1,7 +1,13 @@
 package com.yunuscagliyan.memorybook;
 
+import android.app.ActivityManager;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.Cursor;
-import android.graphics.PorterDuff;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -29,6 +35,8 @@ import com.yunuscagliyan.memorybook.dataEventBus.DataEvent;
 import com.yunuscagliyan.memorybook.fragments.DialogFragmentNewNote;
 import com.yunuscagliyan.memorybook.fragments.FragmentDialogNoteCompleted;
 import com.yunuscagliyan.memorybook.listeners.Filters;
+import com.yunuscagliyan.memorybook.receivers.BootReceiver;
+import com.yunuscagliyan.memorybook.services.NotificationService;
 
 
 import org.greenrobot.eventbus.EventBus;
@@ -39,9 +47,12 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
     private static final Uri CONTENT_URI = NoteProvider.CONTENT_URI;
     public static final String NOTE_NOT_INLINE="UNORDERED";
     public static final String NOTE_COMPLETED_UNIMPORTANT ="UNIMPORTANT_COMPLETED";
+
+    BootReceiver receiver;
 
     Toolbar mToolbar;
     DrawerLayout mDrawerLayout;
@@ -56,6 +67,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     View emptyList;
     FloatingActionButton fab;
     ArrayList<Notes> mAllNotes;
+
+    NotificationService service;
+
+
 
 
     @Override
@@ -73,7 +88,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         rVNoteList.isEmptyListInvisible(mToolbar,fab);
         rVNoteList.isEmptyListVisible(emptyList);
         implementFilter();
+        new BootReceiver();
 
+        /*
+
+        AlarmManager manager= (AlarmManager) getSystemService(ALARM_SERVICE);
+        Intent intent=new Intent(this,NotificationService.class);
+        PendingIntent pendingIntent=PendingIntent.getService(this,100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+        manager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,1000,5000,pendingIntent);
+        */
+        receiver=new BootReceiver();
+        runMyService();
+
+
+    }
+
+    private void runMyService() {
+        service=new NotificationService();
+        if(isMyServiceRunning(service)==false){
+            Intent intent=new Intent(this,NotificationService.class);
+            startService(intent);
+        }
+    }
+
+    private boolean isMyServiceRunning(NotificationService serviceClass) {
+        ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+            if (NotificationService.TAG.equals(service.service.getClassName())) {
+                return true;
+            }
+        }
+        return false;
     }
     private void implementFilter(){
         int selectedFilter= MemoryBookApp.readShared(this);
@@ -155,6 +200,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        /*
+        *Alarm Manager
+         */
+
 
 
     }
@@ -223,6 +272,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onStart() {
         EventBus.getDefault().register(this);
         super.onStart();
+
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_BOOT_COMPLETED);
+        this.registerReceiver(receiver, filter);
+        super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        unregisterReceiver(receiver);
+        super.onDestroy();
     }
 
     @Subscribe
@@ -249,6 +315,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onStop() {
         EventBus.getDefault().unregister(this);
         super.onStop();
+
+
     }
 
     @Override
@@ -289,7 +357,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     result=false;
                     MemoryBookApp.writeShared(this,Filters.NOFILTER);
         }
+
         return result;
+
+
     }
 
 

@@ -33,16 +33,18 @@ public class NoteProvider extends ContentProvider {
      * DATABASE AND TABLE
      */
     private final static String DATABASE_NAME="notes.db";
-    private final static int DATABASE_VERSION=5;
+    private final static int DATABASE_VERSION=6;
     public final static String TABLE_NAME="notes";
     public final static String COLUMN_NOTE_ID="id";
     public final static String COLUMN_NOTE_CONTENT="note_content";
+    public final static String COLUMN_NOTE_INSERTION_TIME="note_insertion_time";
     public final static String COLUMN_NOTE_DATE="note_date";
     public final static String COLUMN_NOTE_COMPLETE="note_complete";
 
     private final static String CREATE_NOTES_TABLE="CREATE TABLE "+TABLE_NAME
             +"("+COLUMN_NOTE_ID+" INTEGER Primary Key AUTOINCREMENT,"
             +COLUMN_NOTE_CONTENT+" TEXT NOT NULL,"
+            +COLUMN_NOTE_INSERTION_TIME+" INTEGER,"
             +COLUMN_NOTE_DATE+" INTEGER,"
             +COLUMN_NOTE_COMPLETE+" INTEGER DEFAULT 0);";
 

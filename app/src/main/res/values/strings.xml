@@ -17,4 +17,6 @@
     <string name="not_completed_task">Not Completed Task</string>
     <string name="filter_result_empty">Filter Result:empty</string>
     <string name="all_notes">All Notes</string>
+    <string name="set_time">Set Time</string>
+    <string name="set_date">Set Date</string>
 </resources>
