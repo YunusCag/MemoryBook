@@ -67,7 +67,6 @@ public class DialogFragmentNewNote extends DialogFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_new_note, container, false);
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         mCalendar=Calendar.getInstance();
 
         return view;
