@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <group>
+    <group android:checkableBehavior="all">
         <item
             android:id="@+id/menu_my_day"
             android:title="@string/my_day"
@@ -9,7 +9,7 @@
             app:showAsAction="always"
             android:checkable="true" />
     </group>
-    <group>
+    <group android:checkableBehavior="all">
         <item
             android:id="@+id/menu_not_completed_notes"
             android:title="@string/not_completed_task"
@@ -23,7 +23,7 @@
             app:showAsAction="always"
             android:checkable="true" />
     </group>
-    <group>
+    <group android:checkableBehavior="all">
         <item
             android:id="@+id/menu_long_time"
             android:title="@string/long_time"

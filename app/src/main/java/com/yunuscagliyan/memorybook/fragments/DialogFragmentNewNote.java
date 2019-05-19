@@ -57,7 +57,7 @@ public class DialogFragmentNewNote extends BottomSheetDialogFragment {
     @Override
     public void onStart() {
         super.onStart();
-        ///getDialog().getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        getDialog().getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 
     }
 
@@ -67,7 +67,7 @@ public class DialogFragmentNewNote extends BottomSheetDialogFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_new_note, container, false);
-        //getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         mCalendar=Calendar.getInstance();
 
         return view;

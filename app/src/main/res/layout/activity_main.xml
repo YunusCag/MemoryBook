@@ -49,12 +49,11 @@
         android:layout_height="match_parent"
         android:id="@+id/nav_view"
         android:layout_gravity="start"
-        android:background="#eeeeee"
         android:clickable="true"
+        android:background="#607d8b"
         app:menu="@menu/menu_items_only"
-        app:itemBackground="@drawable/nav_item_background"
-        app:itemTextColor="@android:color/black"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:itemTextColor="@android:color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:headerLayout="@layout/nav_header">
 
     </android.support.design.widget.NavigationView>

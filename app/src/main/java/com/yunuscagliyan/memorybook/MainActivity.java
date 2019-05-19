@@ -383,6 +383,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.menu_my_day:
                 updateAdapter(NoteProvider.COLUMN_NOTE_DATE+" ASC", NOTE_COMPLETED_UNIMPORTANT);
                 mDrawerLayout.closeDrawers();
+            case R.id.menu_long_time:
+                MemoryBookApp.writeShared(this,Filters.LONG_TIME);
+                updateAdapter(NoteProvider.COLUMN_NOTE_DATE+" DESC", NOTE_COMPLETED_UNIMPORTANT);
+                mDrawerLayout.closeDrawers();
+                break;
+            case R.id.menu_short_time:
+                MemoryBookApp.writeShared(this,Filters.SHORT_TIME);
+                updateAdapter(NoteProvider.COLUMN_NOTE_DATE+" ASC", NOTE_COMPLETED_UNIMPORTANT);
+                mDrawerLayout.closeDrawers();
+                break;
+            case R.id.menu_completed_notes:
+                MemoryBookApp.writeShared(this,Filters.COMPLETED_NOTE);
+                updateAdapter(NOTE_NOT_INLINE,"1");
+                mDrawerLayout.closeDrawers();
+                break;
+            case R.id.menu_not_completed_notes:
+                MemoryBookApp.writeShared(this,Filters.NOT_COMPLETED_NOTE);
+                updateAdapter(NoteProvider.COLUMN_NOTE_DATE+" ASC","0");
+                mDrawerLayout.closeDrawers();
+                break;
+            default:
 
 
                 break;
