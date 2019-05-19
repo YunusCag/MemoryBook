@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#689f38"></solid>
-            <corners android:radius="20dp"></corners>
+            <solid android:color="#9e9e9e"></solid>
+            <corners android:radius="10dp"></corners>
         </shape>
     </item>
+    <item android:drawable="@drawable/ic_action_calendar_day">
+    </item>
 
-</selector>
+</layer-list>

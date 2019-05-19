@@ -2,113 +2,97 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="200dp"
     android:background="@drawable/add_new_note_background"
     android:fitsSystemWindows="true">
-        <RelativeLayout
+
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
                 <Button
                     android:id="@+id/btn_setDate"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/etNote"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_alignBottom="@+id/btn_setTime"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="51dp"
-                    android:layout_marginTop="46dp"
-                    android:layout_marginBottom="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toStartOf="@+id/btn_setTime"
                     android:background="@drawable/btn_setdate_background"
-                    android:drawableLeft="@drawable/ic_action_calendar_month"
                     android:drawableTint="@android:color/black"
-                    android:text="@string/set_date" />
-
-                <TextView
-                    android:id="@+id/tvTitle"
-                    android:layout_width="329dp"
-                    android:layout_height="28dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="34dp"
-                    android:layout_marginTop="86dp"
-                    android:text="@string/add_new_note"
-                    android:textColor="#f4511e"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteX="32dp"
-                    tools:layout_editor_absoluteY="166dp" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_setTime"
+                    app:layout_constraintHorizontal_bias="0.114"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etNote"
+                    app:layout_constraintVertical_bias="0.272" />
 
                 <ImageButton
                     android:id="@+id/btnClose"
-                    android:layout_width="18dp"
-                    android:layout_height="142dp"
-                    android:layout_alignTop="@+id/tvTitle"
-                    android:layout_alignBottom="@+id/tvTitle"
+                    android:layout_width="22dp"
+                    android:layout_height="40dp"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="-56dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginBottom="56dp"
+                    android:backgroundTint="@android:color/black"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
                     android:background="@null"
                     android:src="@drawable/ic_close"
                     android:tint="@android:color/black"
-                    tools:layout_editor_absoluteX="359dp"
-                    tools:layout_editor_absoluteY="16dp" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.964"
+                    app:layout_constraintStart_toStartOf="@+id/etNote"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
                     android:id="@+id/etNote"
-                    android:layout_width="345dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvTitle"
+                    android:layout_width="316dp"
+                    android:layout_height="47dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="33dp"
-                    android:layout_marginTop="48dp"
-                    android:layout_marginEnd="15dp"
-                    android:background="@drawable/add_note_background"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="52dp"
+                    android:background="@drawable/et_background"
                     android:hint="@string/enter_a_note"
                     android:maxLines="1"
                     android:padding="10dp"
-                    android:textColor="@color/darker_gray"
-                    android:textColorHint="@color/darker_gray"
-                    tools:layout_editor_absoluteX="24dp"
-                    tools:layout_editor_absoluteY="287dp" />
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/btnAdd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/etNote"
-                    android:layout_alignParentStart="true"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignRight="@+id/etNote"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginStart="38dp"
-                    android:layout_marginEnd="43dp"
-                    android:layout_marginBottom="-193dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
                     android:background="@drawable/btn_radius"
                     android:gravity="center"
-                    android:text="@string/btnAdd"
                     android:textAllCaps="false"
-                    tools:layout_editor_absoluteX="32dp"
-                    tools:layout_editor_absoluteY="456dp" />
+                    app:layout_constraintBottom_toBottomOf="@+id/etNote"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/etNote"
+                    app:layout_constraintTop_toTopOf="@+id/etNote" />
 
                 <Button
                     android:id="@+id/btn_setTime"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/etNote"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="41dp"
-                    android:layout_marginEnd="41dp"
+                    android:layout_marginEnd="272dp"
                     android:background="@drawable/btn_set_time_background"
-                    android:drawableLeft="@drawable/ic_alarm_on"
-                    android:text="@string/set_time"
-                    tools:layout_editor_absoluteX="253dp"
-                    tools:layout_editor_absoluteY="384dp" />
+                    app:layout_constraintBottom_toBottomOf="@+id/btn_setDate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/btn_setDate"
+                    app:layout_constraintVertical_bias="0.0" />
 
 
-        </RelativeLayout>
-
+        </android.support.constraint.ConstraintLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>

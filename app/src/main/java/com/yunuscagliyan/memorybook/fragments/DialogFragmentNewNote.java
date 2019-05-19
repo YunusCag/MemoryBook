@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.text.format.DateUtils;
@@ -40,7 +41,7 @@ import java.util.Date;
 
 import es.dmoral.toasty.Toasty;
 //
-public class DialogFragmentNewNote extends DialogFragment {
+public class DialogFragmentNewNote extends BottomSheetDialogFragment {
     private static final Uri CONTENT_URI = NoteProvider.CONTENT_URI;
 
     private ImageButton btnClose;
@@ -56,7 +57,7 @@ public class DialogFragmentNewNote extends DialogFragment {
     @Override
     public void onStart() {
         super.onStart();
-        getDialog().getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        ///getDialog().getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 
     }
 
@@ -66,7 +67,7 @@ public class DialogFragmentNewNote extends DialogFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_new_note, container, false);
-        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        //getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         mCalendar=Calendar.getInstance();
 
         return view;

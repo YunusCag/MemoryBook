@@ -1,11 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/menu_my_day"
-        android:title="@string/my_day"
-        android:icon="@drawable/ic_today"
-        app:showAsAction="always"
-        android:checkable="true" />
+    <group>
+        <item
+            android:id="@+id/menu_my_day"
+            android:title="@string/my_day"
+            android:icon="@drawable/ic_today"
+            app:showAsAction="always"
+            android:checkable="true" />
+    </group>
+    <group>
+        <item
+            android:id="@+id/menu_not_completed_notes"
+            android:title="@string/not_completed_task"
+            android:icon="@drawable/icon_unchecked"
+            app:showAsAction="always"
+            android:checkable="true" />
+        <item
+            android:id="@+id/menu_completed_notes"
+            android:title="@string/not_completed_task"
+            android:icon="@drawable/icon_checked"
+            app:showAsAction="always"
+            android:checkable="true" />
+    </group>
+    <group>
+        <item
+            android:id="@+id/menu_long_time"
+            android:title="@string/long_time"
+            android:icon="@drawable/icon_cloud"
+            app:showAsAction="always"
+            android:checkable="true" />
+        <item
+            android:id="@+id/menu_short_time"
+            android:title="@string/short_time"
+            android:icon="@drawable/icon_circle"
+            app:showAsAction="always"
+            android:checkable="true" />
+    </group>
+
+
+
+
 
 </menu>

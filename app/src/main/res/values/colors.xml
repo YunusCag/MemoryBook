@@ -20,6 +20,6 @@
 
     <color name="btn_add_note_text_color">#4e4e4e</color>
     <color name="btn_add_note_background_color">#f34573</color>
-    <color name="btn_clicked_background">#9c93c9</color>
+    <color name="btn_clicked_background">#f06292</color>
 
 </resources>

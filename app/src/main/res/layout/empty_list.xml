@@ -23,6 +23,7 @@
             android:fontFamily="sans-serif-thin"
             android:textSize="@dimen/btn_text_size"
             android:textAllCaps="false"
+            android:textStyle="bold"
             android:layout_marginBottom="36dp"
             android:layout_centerHorizontal="true"
             android:paddingLeft="@dimen/btn_text_padding_left_right"
