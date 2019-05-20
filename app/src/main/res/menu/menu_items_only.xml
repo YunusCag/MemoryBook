@@ -18,7 +18,7 @@
             android:checkable="true" />
         <item
             android:id="@+id/menu_completed_notes"
-            android:title="@string/not_completed_task"
+            android:title="@string/completed_task"
             android:icon="@drawable/icon_checked"
             app:showAsAction="always"
             android:checkable="true" />
